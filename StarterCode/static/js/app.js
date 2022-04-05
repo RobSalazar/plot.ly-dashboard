@@ -88,7 +88,7 @@ function optionChanged(selectedID){
     yaxis: {title: 'Number of Samples Collected'},
     showlegend: false,
     height: 800,
-    width: 1800
+    width: 1600
     };
  Plotly.newPlot('bubble', [bubbleTrace], bubbleLayout); 
  });
