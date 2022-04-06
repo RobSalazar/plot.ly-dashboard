@@ -1,19 +1,19 @@
-//Use the D3 library to read in samples.json
-function optionChanged(selectedID){
+// //Use the D3 library to read in samples.json and change function name to not overwrite original function name
+function optionChangeBonus(selectedID){
 
    //Pathing to JSON file data 
    d3.json("samples.json").then((data) => {
    d3.select("#selDataset").html("");   
 
-   //Grab metadata array data for each item aka "ID" and append each ID to an item
+//    //Grab metadata array data for each item aka "ID" and append each ID to an item
    data.metadata.forEach(item => {
       d3.select ("#selDataset").append('option').attr('value', item.id).text(item.id);
       });
 
-   //Pass the selected value through JSON for filtering
+//    //Pass the selected value through JSON for filtering
    d3.select("#selDataset").node().value = selectedID;
 
-   //Filter metadata based on selected ID
+//    //Filter metadata based on selected ID
    var metaDataID = data.metadata.filter(item=> (item.id == selectedID));
 
 
@@ -57,9 +57,9 @@ function optionChanged(selectedID){
    })};
 
  //This needed to be added also so gauge would display on initial load
- optionChanged(940);
+ optionChangeBonus(940);
  
- //Added for consistancy
+//  //Added for consistancy
  d3.select("#selDataset").on('change',() => {
- optionChanged(d3.event.target.value);
+ optionChangeBonus(d3.event.target.value);
  });
