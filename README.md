@@ -22,6 +22,10 @@ The following task is advanced and therefore optional.
 
 * Update the chart whenever a new sample is selected.
 
+![bellygauge](Images/bonusgauge.PNG)
+
+## Deployment
+Once completed use [this]() to navigate over to the live website where you can interact with the dashboard.
 
 - - -
 
